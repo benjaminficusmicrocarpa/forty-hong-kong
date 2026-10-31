@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
+@import "tailwindcss";
+@import "maplibre-gl/dist/maplibre-gl.css";
+
+@theme {
+  --color-paper: #f3efe6;
+  --color-paper-2: #fffaf3;
+  --color-ink: #1c1915;
+  --color-muted: #6e675e;
+  --color-line: #e4d9c8;
+  --color-moss: #1f4a3a;
+  --color-moss-2: #2c6b52;
+  --color-canopy: #e7f0ea;
+  --font-sans: "Noto Sans TC", "WenQuanYi Zen Hei", sans-serif;
+  --radius-card: 1rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  input[type="range"] {
+    accent-color: var(--color-moss);
+    height: 1.75rem;
+  }
+}
